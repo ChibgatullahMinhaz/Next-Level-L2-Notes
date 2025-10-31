@@ -20,7 +20,7 @@ Big O notation helps us understand **how the runtime or space requirements of an
 ## ⚙️ Common Big O Notations (from fastest to slowest)
 
 ### 🟢 **O(1) — Constant Time**
-The time to complete a task **does not change**, regardless of the input size.  
+The time to complete a task **does not change**, **regardless** of the input size.  
 ✅ Example: Accessing an element in an array or a value in a hash map.
 
 
