@@ -1,5 +1,6 @@
 //* Denormalizing Data (Client-Side "Join")
 
+
 // Scenario: You have an array of users and a separate array of posts.
 // You want to create a new array of users where each user object contains a posts array of their own posts.
 
@@ -18,12 +19,23 @@ const posts = [
     { id: 5, userId: 102, title: "Node.js streams" },
 ];
 
-const map = new Map();
-for (const user of users) {
-   map.set(user.id,{...users, post: []})
-}
+const postPost = posts.reduce((table, post) => {
+    const { userId } = post;
+    if (!table[userId]) {
+        table[userId] = []
+    }
+    table[userId].push(post)
+    return table
+}, {})
 
-console.log(map)
+const processUserData = users.map((user) => {
+    return {
+        ...user,
+        posts: postPost[user.id] || []
+    }
+})
+
+console.log(JSON.stringify(processUserData))
 //? output
 // [
 //   { id: 101, name: 'Alice', posts: [ { id: 2, ... }, { id: 3, ... } ] },

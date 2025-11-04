@@ -13,6 +13,8 @@ const events = [
   { timestamp: "2025-10-22T11:02:00Z", type: "click" },
 ];
 
+
+
 //? Output
 // binnedEvents = {
 //   "2025-10-22T10:00:00.000Z": { "total": 3 },

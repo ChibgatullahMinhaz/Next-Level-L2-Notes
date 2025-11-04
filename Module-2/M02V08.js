@@ -12,11 +12,23 @@ const sales = [
     { category: "Electronics", item: "Keyboard", price: 80, quantity: 1 },
 ];
 
-const processData = {}
-sales.forEach(item => {
-    processData[item.category] = item
-})
-console.log(processData)
+
+
+const reveneue = sales.reduce((acc, product) => {
+
+    if (!acc[product.category]) {
+        acc[product.category] = {
+            totalRevenue: 0,
+            itemCount: 0,
+        }
+    }
+    acc[product.category].totalRevenue += product.price * product.quantity;
+    acc[product.category].itemCount += product.quantity;
+
+    return acc
+}, {})
+
+console.log(reveneue)
 //? Output
 // {
 //   Electronics: {

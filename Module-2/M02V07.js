@@ -16,6 +16,8 @@ const surveyResponses = [
     "A",
 ];
 
+// ? onw way 
+console.time('oneWay')
 const newCountObject = {}
 surveyResponses.forEach(res => {
     if (newCountObject[res]) {
@@ -26,3 +28,17 @@ surveyResponses.forEach(res => {
 
 })
 console.log(newCountObject)
+console.timeEnd('oneWay')
+
+
+
+// ? second way
+console.time('second')
+
+const totalCountOfEvery = surveyResponses.reduce((acc, value) => {
+    acc[value] ? acc[value]++ : acc[value] = 1
+    return acc
+}, {})
+
+console.log(totalCountOfEvery)
+console.timeEnd('second')
