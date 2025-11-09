@@ -11,29 +11,29 @@ class Stack {
         if (this.isEmpty) {
             return undefined;
         }
-        this.items.pop();
-
+       return this.items.pop();
     }
     peek (){
         if (this.isEmpty) {
             return undefined
         }
-        return this.items.length -1
+        return this.items[this.items.length -1]
     }
     print(){
         console.log(this.items)
     }
     isEmpty() {
-        this.items.length === 0
+      return  this.items.length === 0
     }
 
 }
 
-const stackOperation = new Stack();
+const stack = new Stack();
 
-console.log(stackOperation.isEmpty());
-stackOperation.add(10);
-stackOperation.add(20);
-stackOperation.add(30);
-
-stackOperation.print()
+console.log(stack.isEmpty());
+stack.add(10);
+stack.add(20);
+stack.add(30);
+console.log(stack.isEmpty());
+console.log(stack.peek())
+stack.print()
