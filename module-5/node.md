@@ -1,0 +1,24 @@
+# Note Of Basic To Advanced TypeScript Type
+
+- Type Assertion
+- Type interface
+- Generic Type
+- Generic Type with interface
+- Generic type with Function 
+- constrain in TypeScript
+- Keyof constrain with generic
+- Enum Type 
+- as const Assertion
+- Primitive Type
+- not primitive / Reference Type
+- string literal type
+- object & optional Type
+- Rest and Spread
+- Destructuring
+- type Alias 
+- Type Interface
+- union type 
+- intersection type 
+- nullish coalescing
+- unknown, never,nullable
+- keyof , typeof 
