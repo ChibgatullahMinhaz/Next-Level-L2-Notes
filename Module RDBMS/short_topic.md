@@ -16,3 +16,11 @@
 ## some importent keyword 
 - alter 
 - like , between, or , 
+
+## Join 
+- inner join
+- cross join 
+- natural jon 
+- left join 
+- right join 
+- full join 
