@@ -20,10 +20,10 @@ create table if not exists courses (
 --create table for enrollments
 create table if not exists enrollments(
     enrollment_id serial primary key,
-    student_id int references students(student_id) not null on delete cascade,
-    course_id int references courses(course_id) not null on delete cascade,
+    student_id int not null references students(student_id) on delete cascade,
+    course_id int not null references courses(course_id) on delete cascade,
     enrollment_date date not null,
-    progress_percentage date ,
+    progress_percentage int ,
     paid_amount numeric(10,2)
 )
 
